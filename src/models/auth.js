@@ -18,7 +18,7 @@ module.exports = {
     },
     login: email => {
       return new Promise((resolve, reject) => {
-        connection.query('SELECT * FROM talent WHERE email=?', `${email}`, (err, result) => {
+        connection.query(query.auth.talent.login, `${email}`, (err, result) => {
           if (err) {
             reject(err);
           };
@@ -31,4 +31,19 @@ module.exports = {
       })
     }
   },
+  company: {
+    register: data => {
+      return new Promise((resolve, reject) => {
+        connection.query(query.auth.company.register, data, (err, result) => {
+          if (err) {
+            reject(err);
+          };
+          const response = {
+            message: 'Register success!'
+          }
+          resolve(response);
+        })
+      })
+    },
+  }
 }

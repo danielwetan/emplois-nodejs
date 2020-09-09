@@ -47,5 +47,22 @@ module.exports = {
         return helper.response(res, 'failed', 'Username or password is wrong!', 400);
       }
     }
+  },
+  company: {
+    register: async (req, res) => {
+      const data = req.body;
+      const salt = bcrypt.genSaltSync(10);
+      const hashPass = bcrypt.hashSync(data.password, salt);
+      data.password = hashPass;
+      data.user_id = userID.generate();
+      try {
+        const result = await authModel.company.register(data);
+        delete result.password;
+        return helper.response(res, 'success', result, 200);
+      } catch (err) {
+        console.log(err);
+        return helper.response(res, 'failed', 'Something error!', 200);
+      }
+    },
   }
 }
