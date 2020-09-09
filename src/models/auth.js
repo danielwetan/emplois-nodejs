@@ -18,23 +18,19 @@ module.exports = {
     },
     login: email => {
       return new Promise((resolve, reject) => {
-        connection.query(query.auth.talent.login, `${email}`, (err, result) => {
+        connection.query(query.auth.talent.login, email, (err, result) => {
           if (err) {
             reject(err);
           };
-          const response = {
-            ...result,
-            message: 'Login success!'
-          }
           resolve(result);
         })
       })
     }
   },
-  company: {
+  hiring_partner: {
     register: data => {
       return new Promise((resolve, reject) => {
-        connection.query(query.auth.company.register, data, (err, result) => {
+        connection.query(query.auth.hiring_partner.register, data, (err, result) => {
           if (err) {
             reject(err);
           };
@@ -45,5 +41,15 @@ module.exports = {
         })
       })
     },
-  }
+    login: email => {
+      return new Promise((resolve, reject) => {
+        connection.query(query.auth.hiring_partner.login, email, (err, result) => {
+          if (err) {
+            reject(err);
+          };
+          resolve(result);
+        })
+      })
+    }
+  },
 }
