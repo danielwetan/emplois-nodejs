@@ -18,7 +18,7 @@ module.exports = {
     },
     login: email => {
       return new Promise((resolve, reject) => {
-        connection.query(query.auth.talent.login, email, (err, result) => {
+        connection.query('SELECT * FROM talent WHERE email=?', `${email}`, (err, result) => {
           if (err) {
             reject(err);
           };
@@ -26,7 +26,7 @@ module.exports = {
             ...result,
             message: 'Login success!'
           }
-          resolve(response);
+          resolve(result);
         })
       })
     }
