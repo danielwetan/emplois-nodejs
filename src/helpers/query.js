@@ -12,7 +12,7 @@ module.exports = {
   },
   profile: {
     talent: {
-      updateSocial: "UPDATE social_media SET ? WHERE user_id=?"
+      updateSocial: "UPDATE social SET ? WHERE user_id=?"
     }
   }
 }
