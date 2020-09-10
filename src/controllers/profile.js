@@ -32,6 +32,17 @@ const talent = {
       return helper.response(res, 'failed', 'Something error', 500);
     }
   },
+  getPageNotFound: async (req, res) => {
+    try {
+      const result = {
+        message: "Page not found - 404"
+      }
+      return helper.response(res, 'failed', result, 404);
+    } catch (err) {
+      console.log(err);
+      return helper.response(res, 'failed', 'Something error', 500);
+    }
+  },
   updateSocialMedia: async (req, res) => {
     const id = req.body.user_id;
     const data = req.body;
