@@ -3,7 +3,8 @@ const router = express.Router();
 const profileController = require('../controllers/profile');
 const multer = require('../helpers/multer');
 
-router.get('/talent/portofolio', profileController.talent.getPortofolio);
+router.get('/talent/portofolio', multer.none(), profileController.talent.getPortofolio);
+router.get('/talent/experience', multer.none(), profileController.talent.getWorkExperience);
 
 router.patch('/talent/me', multer.single('image'), profileController.talent.updateGeneralInfo);
 router.patch('/talent/social', multer.none(), profileController.talent.updateSocialMedia);

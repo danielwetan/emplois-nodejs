@@ -12,6 +12,16 @@ const talent = {
       return helper.response(res, 'failed', 'Something error', 500);
     }
   },
+  getWorkExperience: async (req, res) => {
+    const id = req.body.user_id;
+    try {
+      const result = await profileModel.talent.getWorkExperience(id);
+      return helper.response(res, 'success', result, 200);
+    } catch (err) {
+      console.log(err);
+      return helper.response(res, 'failed', 'Something error', 500);
+    }
+  },
   updateSocialMedia: async (req, res) => {
     const id = req.body.user_id;
     const data = req.body;

@@ -13,6 +13,16 @@ const talent = {
       })
     })
   },
+  getWorkExperience: id => {
+    return new Promise((resolve, reject) => {
+      connection.query(query.profile.talent.getWorkExperience, id, (err, result) => {
+        if (err) {
+          reject(err);
+        };
+        resolve(result);
+      })
+    })
+  },
   updateSocialMedia: (data, id) => {
     return new Promise((resolve, reject) => {
       connection.query(query.profile.talent.updateSocialMedia, [data, id], (err, result) => {
