@@ -12,7 +12,8 @@ module.exports = {
   },
   profile: {
     talent: {
-      updateSocialMedia: "UPDATE social_media SET ? WHERE user_id=?"
+      updateSocialMedia: "UPDATE social_media SET ? WHERE user_id=?",
+      updateWorkExperience: "UPDATE experience SET ? WHERE user_id=?"
     },
     hiring_partner: {
       updateSocialMedia: "UPDATE social_media SET ? WHERE user_id=?"

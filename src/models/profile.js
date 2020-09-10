@@ -14,6 +14,19 @@ const talent = {
         resolve(response);
       })
     })
+  },
+  updateWorkExperience: (data, id) => {
+    return new Promise((resolve, reject) => {
+      connection.query(query.profile.talent.updateWorkExperience, [data, id], (err, result) => {
+        if (err) {
+          reject(err)
+        }
+        const response = {
+          message: 'Update success!'
+        }
+        resolve(response);
+      })
+    })
   }
 }
 
