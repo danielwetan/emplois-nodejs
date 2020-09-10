@@ -3,7 +3,7 @@ const helper = require('../helpers/response');
 
 const talent = {
   getPortofolio: async (req, res) => {
-    const id = req.body.user_id;
+    const id = req.params.user_id;
     try {
       const result = await profileModel.talent.getPortofolio(id);
       return helper.response(res, 'success', result, 200);
@@ -13,9 +13,19 @@ const talent = {
     }
   },
   getWorkExperience: async (req, res) => {
-    const id = req.body.user_id;
+    const id = req.params.user_id;
     try {
       const result = await profileModel.talent.getWorkExperience(id);
+      return helper.response(res, 'success', result, 200);
+    } catch (err) {
+      console.log(err);
+      return helper.response(res, 'failed', 'Something error', 500);
+    }
+  },
+  getGeneralInfo: async (req, res) => {
+    const id = req.params.user_id;
+    try {
+      const result = await profileModel.talent.getGeneralInfo(id);
       return helper.response(res, 'success', result, 200);
     } catch (err) {
       console.log(err);
