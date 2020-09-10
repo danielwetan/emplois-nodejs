@@ -12,6 +12,7 @@ module.exports = {
   },
   profile: {
     talent: {
+      getPortofolio: "SELECT * FROM portofolio WHERE user_id=? ORDER BY id DESC LIMIT 6",
       updateSocialMedia: "UPDATE social_media SET ? WHERE user_id=?",
       updateWorkExperience: "UPDATE experience SET ? WHERE user_id=?",
       updatePortofolio: "UPDATE portofolio SET ? WHERE user_id=?",

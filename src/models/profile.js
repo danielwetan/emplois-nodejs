@@ -3,6 +3,16 @@ const query = require('../helpers/query');
 
 // Talent
 const talent = {
+  getPortofolio: id => {
+    return new Promise((resolve, reject) => {
+      connection.query(query.profile.talent.getPortofolio, id, (err, result) => {
+        if (err) {
+          reject(err);
+        };
+        resolve(result);
+      })
+    })
+  },
   updateSocialMedia: (data, id) => {
     return new Promise((resolve, reject) => {
       connection.query(query.profile.talent.updateSocialMedia, [data, id], (err, result) => {
