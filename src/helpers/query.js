@@ -14,7 +14,8 @@ module.exports = {
     talent: {
       updateSocialMedia: "UPDATE social_media SET ? WHERE user_id=?",
       updateWorkExperience: "UPDATE experience SET ? WHERE user_id=?",
-      updatePortofolio: "UPDATE portofolio SET ? WHERE user_id=?"
+      updatePortofolio: "UPDATE portofolio SET ? WHERE user_id=?",
+      updateGeneralInfo: "UPDATE talent SET ? WHERE user_id=?",
     },
     hiring_partner: {
       updateSocialMedia: "UPDATE social_media SET ? WHERE user_id=?"

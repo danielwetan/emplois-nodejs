@@ -36,7 +36,19 @@ const talent = {
       console.log(err);
       return helper.response(res, 'failed', 'Something error', 500);
     }
-  }
+  },
+  updateGeneralInfo: async (req, res) => {
+    const id = req.body.user_id;
+    const data = req.body;
+    data.image = req.file ? req.file.filename : 'talent.jpg';
+    try {
+      const result = await profileModel.talent.updateGeneralInfo(data, id);
+      return helper.response(res, 'success', result, 201);
+    } catch (err) {
+      console.log(err);
+      return helper.response(res, 'failed', 'Something error', 500);
+    }
+  },
 }
 
 const hiring_partner = {

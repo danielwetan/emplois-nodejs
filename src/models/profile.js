@@ -1,6 +1,7 @@
 const connection = require('../helpers/mysql');
 const query = require('../helpers/query');
 
+// Talent
 const talent = {
   updateSocialMedia: (data, id) => {
     return new Promise((resolve, reject) => {
@@ -41,8 +42,22 @@ const talent = {
       })
     })
   },
+  updateGeneralInfo: (data, id) => {
+    return new Promise((resolve, reject) => {
+      connection.query(query.profile.talent.updateGeneralInfo, [data, id], (err, result) => {
+        if (err) {
+          reject(err)
+        }
+        const response = {
+          message: 'Update success!'
+        }
+        resolve(response);
+      })
+    })
+  },
 }
 
+// Hiring partner
 const hiring_partner = {
   updateSocialMedia: (data, id) => {
     return new Promise((resolve, reject) => {
