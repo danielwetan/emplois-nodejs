@@ -6,5 +6,6 @@ const multer = require('../helpers/multer');
 router.patch('/talent/social', profileController.talent.updateSocialMedia);
 router.patch('/partner/social', profileController.hiring_partner.updateSocialMedia);
 router.patch('/talent/experience', multer.single('image'), profileController.talent.updateWorkExperience);
+router.patch('/talent/portofolio', multer.single('image'), profileController.talent.updatePortofolio);
 
 module.exports = router;

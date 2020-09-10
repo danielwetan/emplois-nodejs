@@ -27,7 +27,20 @@ const talent = {
         resolve(response);
       })
     })
-  }
+  },
+  updatePortofolio: (data, id) => {
+    return new Promise((resolve, reject) => {
+      connection.query(query.profile.talent.updatePortofolio, [data, id], (err, result) => {
+        if (err) {
+          reject(err)
+        }
+        const response = {
+          message: 'Update success!'
+        }
+        resolve(response);
+      })
+    })
+  },
 }
 
 const hiring_partner = {
