@@ -1,5 +1,7 @@
 const profileModel = require('../models/profile');
 const helper = require('../helpers/response');
+const redis = require('../middleware/redis');
+
 
 const talent = {
   getPortofolio: async (req, res) => {
@@ -26,6 +28,11 @@ const talent = {
     const id = req.params.user_id;
     try {
       const result = await profileModel.talent.getGeneralInfo(id);
+      const entries = Object.entries(result[0]);
+      const obj = Object.fromEntries(entries);
+      console.log("Hello from main controller")
+      const name = 'talent:';
+      redis.caching(name, id, obj)
       return helper.response(res, 'success', result, 200);
     } catch (err) {
       console.log(err);
@@ -84,6 +91,7 @@ const talent = {
     data.image = req.file ? req.file.filename : 'talent.jpg';
     try {
       const result = await profileModel.talent.updateGeneralInfo(data, id);
+      redis.deleteCache('talent:' + id);
       return helper.response(res, 'success', result, 201);
     } catch (err) {
       console.log(err);
