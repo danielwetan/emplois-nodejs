@@ -24,7 +24,9 @@ module.exports = {
       updateSocialMedia: "UPDATE social_media SET ? WHERE user_id=?"
     }
   },
-  // home: {
-  //   getHomeData: "SELECT id, user_id, name, skills, location, position, job_type, image FROM talent WHERE skills LIKE ? OR location LIKE ? OR position LIKE ? OR job_type LIKE ? ORDER BY ? LIMIT 8 OFFSET ?"
-  // }
+  home: {
+    // getHomeData: "SELECT id, user_id, name, skills, location, position, job_type, image FROM talent WHERE skills LIKE ? OR location LIKE ? OR position LIKE ? OR job_type LIKE ? ORDER BY ? LIMIT 8 OFFSET ?",
+    // getHomeData: "SELECT id, user_id, name, skills, location, position, job_type, image FROM talent WHERE job_type = ? ORDER BY ? LIMIT ? OFFSET ?",
+    getHomeData: ""
+  }
 }

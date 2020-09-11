@@ -7,7 +7,7 @@ const profileController = require('../controllers/profile')
 
 router.use('/talent/auth', authRouter);
 router.use('/talent/profile', profileRouter);
-// router.use('/talent/home', homeRouter);
+router.use('/talent/home', homeRouter);
 router.use('*', profileController.talent.getPageNotFound);
 
 module.exports = router;
