@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 14, 2020 at 01:34 PM
+-- Generation Time: Sep 14, 2020 at 01:51 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -51,13 +51,7 @@ INSERT INTO `experience` (`id`, `user_id`, `position`, `company`, `date`, `descr
 (5, '4wPsf2CV-', 'Engineer', 'Microsoft', 'May 2019 - April 2020', 'Nulla luctus lorem non nibh mollis, sed pharetra nisl tincidunt. Morbi pharetra arcu eros, et lobortis sem ornare eu. Sed faucibus facilisis lectus, sit amet mollis leo tempor id.', 'company.jpg', '2020-09-14 02:46:49', NULL),
 (6, '_hwJGDRLZ', 'Engineer', 'Amazon', 'June 2019 - May 2020', 'Curabitur sit amet accumsan erat, eu sollicitudin erat. Cras pulvinar elit ac dictum viverra. Donec convallis tempor quam, sed porta nisi aliquam cursus. Ut consequat eu mauris id tincidunt. Cras ac dapibus leo.', 'company.jpg', '2020-09-14 02:47:19', NULL),
 (7, 'y3VSeK8Kp', 'Engineer', 'Facebook', 'July 2019 - June 2020', 'In ac varius mauris, et pretium ante. Integer fermentum ullamcorper urna sit amet blandit. Nunc ligula justo, consectetur non accumsan id, sagittis et arcu.', 'company.jpg', '2020-09-14 02:47:28', NULL),
-(8, 'fQ1yDKIMI', 'Engineer', 'Microsoft', 'August 2019 - July 2020', 'Nulla vulputate id justo at facilisis. Sed neque arcu, pharetra non nisi nec, malesuada ullamcorper nisl. Donec pulvinar diam a velit fermentum porta. Proin mollis ligula nec dolor euismod fringilla.', 'company.jpg', '2020-09-14 02:47:36', NULL),
-(9, 'oR681PypF', NULL, NULL, NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.', 'company.jpg', '2020-09-14 17:49:21', NULL),
-(10, '6Bjlba8xY', NULL, NULL, NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.', 'company.jpg', '2020-09-14 17:52:01', NULL),
-(11, 'ONE2NIVxF', NULL, NULL, NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.', 'company.jpg', '2020-09-14 17:52:58', NULL),
-(12, 'MBu15-6aL', NULL, NULL, NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.', 'company.jpg', '2020-09-14 17:53:34', NULL),
-(13, 'yGF4iEl_0O', NULL, NULL, NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.', 'company.jpg', '2020-09-14 17:53:34', NULL),
-(14, 'm2cyBCHmY', NULL, NULL, NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.', 'company.jpg', '2020-09-14 17:53:38', NULL);
+(8, 'fQ1yDKIMI', 'Engineer', 'Microsoft', 'August 2019 - July 2020', 'Nulla vulputate id justo at facilisis. Sed neque arcu, pharetra non nisi nec, malesuada ullamcorper nisl. Donec pulvinar diam a velit fermentum porta. Proin mollis ligula nec dolor euismod fringilla.', 'company.jpg', '2020-09-14 02:47:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -114,13 +108,7 @@ INSERT INTO `portofolio` (`id`, `user_id`, `name`, `description`, `publication_l
 (5, '4wPsf2CV-', NULL, NULL, NULL, NULL, NULL, NULL, 'portofolio3.png', '2020-09-13 19:46:49', NULL),
 (6, '_hwJGDRLZ', NULL, NULL, NULL, NULL, NULL, NULL, 'portofolio2.png', '2020-09-13 19:47:19', NULL),
 (7, 'y3VSeK8Kp', NULL, NULL, NULL, NULL, NULL, NULL, 'portofolio1.png', '2020-09-13 19:47:28', NULL),
-(8, 'fQ1yDKIMI', NULL, NULL, NULL, NULL, NULL, NULL, 'portofolio3.png', '2020-09-13 19:47:36', NULL),
-(9, 'oR681PypF', NULL, NULL, NULL, NULL, NULL, 1, 'portofolio.jpg', '2020-09-14 10:49:21', NULL),
-(10, '6Bjlba8xY', NULL, NULL, NULL, NULL, NULL, 1, 'portofolio.jpg', '2020-09-14 10:52:01', NULL),
-(11, 'ONE2NIVxF', NULL, NULL, NULL, NULL, NULL, 1, 'portofolio.jpg', '2020-09-14 10:52:58', NULL),
-(12, 'MBu15-6aL', NULL, NULL, NULL, NULL, NULL, 1, 'portofolio.jpg', '2020-09-14 10:53:34', NULL),
-(13, 'yGF4iEl_0O', NULL, NULL, NULL, NULL, NULL, 1, 'portofolio.jpg', '2020-09-14 10:53:34', NULL),
-(14, 'm2cyBCHmY', NULL, NULL, NULL, NULL, NULL, 1, 'portofolio.jpg', '2020-09-14 10:53:38', NULL);
+(8, 'fQ1yDKIMI', NULL, NULL, NULL, NULL, NULL, NULL, 'portofolio3.png', '2020-09-13 19:47:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -150,13 +138,7 @@ INSERT INTO `social_media` (`id`, `user_id`, `instagram`, `github`, `linkedin`, 
 (5, '4wPsf2CV-', '@ahmad', 'github.com/ahmad', 'linkedin.com/in/ahmad', '2020-09-13 19:46:49', NULL),
 (6, '_hwJGDRLZ', '@yuda', 'github.com/yuda', 'linkedin.com/in/yuda', '2020-09-13 19:47:19', NULL),
 (7, 'y3VSeK8Kp', '@rizal', 'github.com/rizal', 'linkedin.com/in/rizal', '2020-09-13 19:47:28', NULL),
-(8, 'fQ1yDKIMI', '@dimas', 'github.com/dimas', 'linkedin.com/in/dimas', '2020-09-13 19:47:36', NULL),
-(9, 'oR681PypF', 'Instagram', 'Github', 'Linkedin', '2020-09-14 10:49:21', NULL),
-(10, '6Bjlba8xY', 'Instagram', 'Github', 'Linkedin', '2020-09-14 10:52:01', NULL),
-(11, 'ONE2NIVxF', 'Instagram', 'Github', 'Linkedin', '2020-09-14 10:52:58', NULL),
-(12, 'MBu15-6aL', 'Instagram', 'Github', 'Linkedin', '2020-09-14 10:53:34', NULL),
-(13, 'yGF4iEl_0O', 'Instagram', 'Github', 'Linkedin', '2020-09-14 10:53:34', NULL),
-(14, 'm2cyBCHmY', 'Instagram', 'Github', 'Linkedin', '2020-09-14 10:53:38', NULL);
+(8, 'fQ1yDKIMI', '@dimas', 'github.com/dimas', 'linkedin.com/in/dimas', '2020-09-13 19:47:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -193,13 +175,7 @@ INSERT INTO `talent` (`id`, `user_id`, `email`, `password`, `name`, `phone_numbe
 (5, '4wPsf2CV-', 'ahmad@mail.com', '$2b$10$a6lQX1xWu1iUuAEt86dbE.HVNOauSEh.3wLo2D5HpzBk44lbJJyjW', 'Ahmad', '0878878878', 'Frontend Engineer', 'Jakarta, Indonesia', 1, 'Phasellus aliquam nunc elit. Nulla sapien lectus, porttitor eget nibh sed, tincidunt posuere purus. Nulla et iaculis dui, quis iaculis arcu.', 'PHP, Node.js, C++', 'talent.jpg', '2020-09-13 19:46:49', NULL),
 (6, '_hwJGDRLZ', 'yuda@mail.com', '$2b$10$hR9FBFIB6kYfxFtPeNy3k.SWyUA2Bxy4WgA189jmNUWZF3WHFv.RS', 'Yuda', '0878878878', 'Backend Engineer', 'Jakarta, Indonesia', 1, 'Donec a volutpat metus. Nulla volutpat leo at velit viverra, ac laoreet neque viverra. Proin ac ex elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus', 'PHP, Node.js, C++', 'talent.jpg', '2020-09-13 19:47:19', NULL),
 (7, 'y3VSeK8Kp', 'rizal@mail.com', '$2b$10$0Uws48tqxD77pm94opNBo.kINzAuE3IjMVRTxDgrkJs8vb6wv2oTi', 'Rizal', '0878878878', 'Devops Engineer', 'Jakarta, Indonesia', 1, 'Mauris nec congue libero, et aliquet augue. Sed sed iaculis arcu, et gravida dui. Aliquam consequat erat id augue luctus malesuada. Cras vitae velit eget nibh consectetur interdum.', 'PHP, Node.js, C++', 'talent.jpg', '2020-09-13 19:47:28', NULL),
-(8, 'fQ1yDKIMI', 'dimas@mail.com', '$2b$10$Ha330.vnK.SG6ZyYquuMauwFu1VIy/e9PYEaiZdxWxoqqVUymLvie', 'Dimas', '0878878878', 'Backend Engineer', 'Jakarta, Indonesia', 1, 'Sed sed ante a nulla pharetra viverra id scelerisque nisi. Integer vestibulum metus sed condimentum blandit. Integer non maximus neque. Nunc venenatis, sem ac vulputate maximus, lacus erat fermentum ligula.', 'PHP, Node.js, C++', 'talent.jpg', '2020-09-13 19:47:36', NULL),
-(9, 'oR681PypF', 'gramedia@mail.com', '$2b$10$mf9kFGXe14x2Qd2FQUJAveRuROJlOtgoD9M/jOFRDw/2wFfvDOnp6', 'Gramedia', '0878878878', 'Software Engineer', '-', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.', '-', 'talent.jpg', '2020-09-14 10:49:21', NULL),
-(10, '6Bjlba8xY', 'mobil@mail.com', '$2b$10$dd0FwG.2swsI6RkA6OzbeOOmGXlqF4cKc2phpB211u0fRi1/fB/t6', 'Mobile', '1313123', 'Software Engineer', '-', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.', '-', 'talent.jpg', '2020-09-14 10:52:01', NULL),
-(11, 'ONE2NIVxF', 'mobil@mail.com', '$2b$10$2qmLwUv58OF6DXTGPC4FuOVgO6ispFxh4M8JOmBRQQSFMbvAgG7xu', 'Mobile', '1313123', 'Software Engineer', '-', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.', '-', 'talent.jpg', '2020-09-14 10:52:58', NULL),
-(12, 'MBu15-6aL', 'mobil@mail.com', '$2b$10$R2Y8GqSuahbfG.lgKpP3SOD448.B8M5a/9KtmAedPoRJ0SU4zddgW', 'Mobile', '1313123', 'Software Engineer', '-', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.', '-', 'talent.jpg', '2020-09-14 10:53:34', NULL),
-(13, 'yGF4iEl_0O', 'mobil@mail.com', '$2b$10$agKlAwtH9ODwJ9zQrVSgduUWkP0K36agyEQQTtXADpGTuLVtcnsFm', 'Mobile', '1313123', 'Software Engineer', '-', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.', '-', 'talent.jpg', '2020-09-14 10:53:34', NULL),
-(14, 'm2cyBCHmY', 'mobil@mail.com', '$2b$10$ZBpJb1bwiKDyFoxjjNprS.dYcVQ0hXMhhPbrJnl8wXA2bX7sk0Wyy', 'Mobile', '1313123', 'Software Engineer', '-', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.', '-', 'talent.jpg', '2020-09-14 10:53:38', NULL);
+(8, 'fQ1yDKIMI', 'dimas@mail.com', '$2b$10$Ha330.vnK.SG6ZyYquuMauwFu1VIy/e9PYEaiZdxWxoqqVUymLvie', 'Dimas', '0878878878', 'Backend Engineer', 'Jakarta, Indonesia', 1, 'Sed sed ante a nulla pharetra viverra id scelerisque nisi. Integer vestibulum metus sed condimentum blandit. Integer non maximus neque. Nunc venenatis, sem ac vulputate maximus, lacus erat fermentum ligula.', 'PHP, Node.js, C++', 'talent.jpg', '2020-09-13 19:47:36', NULL);
 
 --
 -- Indexes for dumped tables
@@ -243,7 +219,7 @@ ALTER TABLE `talent`
 -- AUTO_INCREMENT for table `experience`
 --
 ALTER TABLE `experience`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `hiring_partner`
@@ -255,19 +231,19 @@ ALTER TABLE `hiring_partner`
 -- AUTO_INCREMENT for table `portofolio`
 --
 ALTER TABLE `portofolio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `social_media`
 --
 ALTER TABLE `social_media`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `talent`
 --
 ALTER TABLE `talent`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
