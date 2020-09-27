@@ -38,7 +38,7 @@ const talent = {
           }
           const mainToken = jwt.sign(mainTokenData, config.jwt.secretKey, { expiresIn: config.jwt.mainTokenLife });
           result[0].token = mainToken
-          return helper.response(res, 'success', result, 200);
+          return helper.response(res, 'success', result[0], 200);
         }
         return helper.response(res, 'failed', 'Username or password is wrong!', 400);
       }

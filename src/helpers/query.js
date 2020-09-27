@@ -14,7 +14,7 @@ module.exports = {
     talent: {
       getPortofolio: "SELECT * FROM portofolio WHERE user_id=? ORDER BY id DESC LIMIT 6",
       getWorkExperience: "SELECT * FROM experience WHERE user_id=? ORDER BY id DESC LIMIT 6",
-      getGeneralInfo: "SELECT talent.id, talent.user_id, talent.email, talent.name, talent.phone_number, talent.position, talent.location, talent.job_type, talent.description, talent.skills, talent.image, social_media.instagram, social_media.github, social_media.linkedin FROM talent INNER JOIN social_media ON social_media.user_id=talent.user_id WHERE talent.user_id=?",
+      getGeneralInfo: "SELECT talent.id, talent.user_id, talent.email, talent.name, talent.phone_number, talent.position, talent.location, talent.job_type, talent.description, talent.skills, talent.image as portofolio, social_media.instagram, social_media.github, social_media.linkedin FROM talent INNER JOIN social_media ON social_media.user_id=talent.user_id WHERE talent.user_id=?",
       updateSocialMedia: "UPDATE social_media SET ? WHERE user_id=?",
       updateWorkExperience: "UPDATE experience SET ? WHERE user_id=?",
       updatePortofolio: "UPDATE portofolio SET ? WHERE user_id=?",

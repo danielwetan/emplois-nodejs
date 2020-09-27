@@ -2,13 +2,18 @@ const connection = require('../helpers/mysql');
 const query = require('../helpers/query');
 
 module.exports = {
-  getHomeData: () => {
+  getHomeData: (page) => {
     return new Promise((resolve, reject) => {
       connection.query(query.home.getHomeData, (err, result) => {
         if (err) {
           reject(err);
         }
-        resolve(result);
+        // let pageNum = page
+        const msg = {
+          ...result,
+          page: page,
+        }
+        resolve(msg);
       })
     })
   }
