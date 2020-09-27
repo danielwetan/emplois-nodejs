@@ -1,6 +1,6 @@
 // Database connection
-const mysql = require('mysql');
-const config = require('../configs/global');
+const mysql = require('mysql')
+const config = require('../configs/global')
 
 const connection = mysql.createConnection({
   host: config.mysql.host,
@@ -10,4 +10,4 @@ const connection = mysql.createConnection({
   multipleStatements: true
 })
 
-module.exports = connection;
+module.exports = connection

@@ -3,13 +3,14 @@ const config = {
     host: process.env.MYSQL_HOST,
     user: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DATABASE,
+    database: process.env.MYSQL_DATABASE
   },
   jwt: {
     secretKey: process.env.JWT_SECRET,
     mainTokenLife: process.env.JWT_MAIN_TOKEN_LIFE,
+    refreshTokenSecretKey: process.env.JWT_REFRESH_TOKEN_SECRET_KEY,
     refreshTokenLife: process.env.JWT_REFRESH_TOKEN_LIFE
   }
 }
 
-module.exports = config;
+module.exports = config

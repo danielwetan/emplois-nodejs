@@ -1,5 +1,5 @@
-const connection = require('../helpers/mysql');
-const query = require('../helpers/query');
+const connection = require('../helpers/mysql')
+const query = require('../helpers/query')
 
 // Talent
 const talent = {
@@ -7,9 +7,9 @@ const talent = {
     return new Promise((resolve, reject) => {
       connection.query(query.profile.talent.getPortofolio, id, (err, result) => {
         if (err) {
-          reject(err);
+          reject(err)
         };
-        resolve(result);
+        resolve(result)
       })
     })
   },
@@ -17,9 +17,9 @@ const talent = {
     return new Promise((resolve, reject) => {
       connection.query(query.profile.talent.getWorkExperience, id, (err, result) => {
         if (err) {
-          reject(err);
+          reject(err)
         };
-        resolve(result);
+        resolve(result)
       })
     })
   },
@@ -27,9 +27,9 @@ const talent = {
     return new Promise((resolve, reject) => {
       connection.query(query.profile.talent.getGeneralInfo, id, (err, result) => {
         if (err) {
-          reject(err);
+          reject(err)
         };
-        resolve(result);
+        resolve(result)
       })
     })
   },
@@ -37,12 +37,12 @@ const talent = {
     return new Promise((resolve, reject) => {
       connection.query(query.profile.talent.updateSocialMedia, [data, id], (err, result) => {
         if (err) {
-          reject(err);
+          reject(err)
         };
         const response = {
           message: 'Update success!'
         }
-        resolve(response);
+        resolve(response)
       })
     })
   },
@@ -55,7 +55,7 @@ const talent = {
         const response = {
           message: 'Update success!'
         }
-        resolve(response);
+        resolve(response)
       })
     })
   },
@@ -68,7 +68,7 @@ const talent = {
         const response = {
           message: 'Update success!'
         }
-        resolve(response);
+        resolve(response)
       })
     })
   },
@@ -81,30 +81,30 @@ const talent = {
         const response = {
           message: 'Update success!'
         }
-        resolve(response);
-      })
-    })
-  },
-}
-
-// Hiring partner
-const hiring_partner = {
-  updateSocialMedia: (data, id) => {
-    return new Promise((resolve, reject) => {
-      connection.query(query.profile.hiring_partner.updateSocialMedia, [data, id], (err, result) => {
-        if (err) {
-          reject(err);
-        };
-        const response = {
-          message: 'Update success!'
-        }
-        resolve(response);
+        resolve(response)
       })
     })
   }
 }
 
+// Hiring partner
+// const hiringPartner = {
+//   updateSocialMedia: (data, id) => {
+//     return new Promise((resolve, reject) => {
+//       connection.query(query.profile.hiring_partner.updateSocialMedia, [data, id], (err, result) => {
+//         if (err) {
+//           reject(err)
+//         };
+//         const response = {
+//           message: 'Update success!'
+//         }
+//         resolve(response)
+//       })
+//     })
+//   }
+// }
+
 module.exports = {
-  talent,
-  hiring_partner
+  talent
+  // hiringPartner
 }

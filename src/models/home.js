@@ -1,19 +1,18 @@
-const connection = require('../helpers/mysql');
-const query = require('../helpers/query');
+const connection = require('../helpers/mysql')
+const query = require('../helpers/query')
 
 module.exports = {
   getHomeData: (page) => {
     return new Promise((resolve, reject) => {
       connection.query(query.home.getHomeData, (err, result) => {
         if (err) {
-          reject(err);
+          reject(err)
         }
-        // let pageNum = page
         const msg = {
           ...result,
-          page: page,
+          page: page
         }
-        resolve(msg);
+        resolve(msg)
       })
     })
   }
@@ -64,6 +63,5 @@ SELECT id, user_id, name, skills, location, position, job_type, image
 FROM talent
 WHERE job_type = 1
 ORDER BY name ASC, skills ASC, location ASC
-
 
 */

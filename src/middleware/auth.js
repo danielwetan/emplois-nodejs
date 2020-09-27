@@ -1,33 +1,32 @@
-const jwt = require('jsonwebtoken');
-const config = require('../configs/global');
-const helper = require('../helpers/response');
+const jwt = require('jsonwebtoken')
+const config = require('../configs/global')
+const helper = require('../helpers/response')
 
 module.exports = {
   verifyJwtToken: (req, res, next) => {
-    let token = config.jwt.mainToken;
+    let token = config.jwt.mainToken
     token = req.headers.authorization
     try {
-      let decoded = jwt.verify(token, config.jwt.secretKey);
-      console.log(decoded);
-      next();
+      const decoded = jwt.verify(token, config.jwt.secretKey)
+      console.log(decoded)
+      next()
     } catch (err) {
       if (err.name === 'TokenExpiredError') {
-        return helper.response(res, 'fail', 'Token expired!', 401);
+        return helper.response(res, 'fail', 'Token expired!', 401)
       }
-      return helper.response(res, 'fail', 'Invalid token', 401);
+      return helper.response(res, 'fail', 'Invalid token', 401)
     }
   },
-  checkRole: (req, res, next) => {
+  refreshToken: (req, res) => {
+    const token = req.headers.authorization
     try {
-      const role = decoded.role
-      if (role == 1) {
-        next();
-      } else {
-        const msg = `You're not an admin!`
-        return helper.response(res, 'fail', msg, 404)
+      const decoded = jwt.verify(token, config.jwt.refreshTokenSecretKey)
+      return helper.response(res, 'success', decoded, 200)
+    } catch (err) {
+      if (err.name === 'TokenExpiredError') {
+        return helper.response(res, 'fail', 'Token expired!', 401)
       }
-    } catch {
-      return helper.response(res, 'fail', 'Something Error!!', 404);
+      return helper.response(res, 'fail', 'Invalid token', 401)
     }
   }
 }
